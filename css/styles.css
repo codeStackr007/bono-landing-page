@@ -28,7 +28,7 @@ body {
     rgba(255,64,50,0.8),
     rgba(71,17,116,0.9)
   ), 
-  url('../images/background.jpg') no-repeat center center;
+  url('../images/background.jpg') no-repeat center/cover;
 }
 
 /* Header */
@@ -153,6 +153,10 @@ body {
 }
 
 /* Media Queries */
+.header {
+  padding: 30px 10px 10px;
+}
+
 @media screen and (max-width: 768px) {
   .header, .header .header-right {
     flex-direction: column;
@@ -163,6 +167,7 @@ body {
     flex-direction: column-reverse;
     justify-content: start;
     margin: auto;
+    padding: 50px;
   }
 
   .main-content form, 
@@ -215,4 +220,15 @@ body {
     padding: 10px 15px;
     font-size: 14px;
   }
+
+  @media (max-height: 500px) {
+    .main-content {
+      margin: 0 auto;
+    }
+  
+    .main-content h1 {
+      font-size: 40px;
+    }
+  }
 }
+
